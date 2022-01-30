@@ -88,6 +88,6 @@ const toggleModal = (e: Event, type?: string) => {
 
 <style>
 .shown-modal {
-    display: block;
+    display: block !important;
 }
 </style>

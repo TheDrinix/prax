@@ -25,6 +25,6 @@ body {
 }
 
 .is-today {
-    border: solid 2px lime;
+    border: solid 2px lime !important;
 }
 </style>
