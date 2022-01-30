@@ -14,6 +14,16 @@ store.commit('getTodayDate');
 </template>
 
 <style>
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    background-image: url('/src/assets/5570834.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .is-today {
     border: solid 2px lime;
 }
