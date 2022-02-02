@@ -10,7 +10,11 @@ store.commit('getTodayDate');
 
 <template>
     <Header />
-    <router-view></router-view>
+    <router-view v-slot="{ Component }">
+        <transition name="fade" mode="in-out">
+            <component :is="Component" />
+        </transition>
+    </router-view>
 </template>
 
 <style>
@@ -26,5 +30,15 @@ body {
 
 .is-today {
     border: solid 2px lime !important;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
 }
 </style>
