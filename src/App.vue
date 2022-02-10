@@ -11,7 +11,7 @@ store.commit('getTodayDate');
 <template>
     <Header />
     <router-view v-slot="{ Component }">
-        <transition name="moveUp">
+        <transition name="fade" mode="out-in">
             <component :is="Component" />
         </transition>
     </router-view>
@@ -33,18 +33,17 @@ body {
     border: solid 2px lime !important;
 }
 
-/* .fade-enter-active,
+.fade-enter-active,
 .fade-leave-active {
-    transition: opacity 0.4s, transform 0.4s;
+    transition: opacity 0.4s ease;
 }
 
-.fade-enter,
+.fade-enter-from,
 .fade-leave-to {
     opacity: 0;
-    transform: translateX(-30%);
-} */
+}
 
-.moveUp-enter-active {
+/* .moveUp-enter-active {
     animation: fadeIn 1s ease-in-out;
 }
 @keyframes fadeIn {
@@ -69,5 +68,5 @@ body {
     100% {
         transform: translateY(-400px);
     }
-}
+} */
 </style>

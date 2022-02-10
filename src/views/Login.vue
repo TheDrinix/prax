@@ -14,7 +14,7 @@ const login = async () => {
         password: password.value,
     });
 
-    const response = await fetch('https://prax-api.thedrinix.me/auth', {
+    const response = await fetch('http://localhost:3001/auth', {
         method: 'POST',
         body: bodyContent,
         headers: {
@@ -32,7 +32,7 @@ const login = async () => {
 };
 </script>
 <template>
-    <div class="container" style="margin-top: 1.5rem">
+    <div class="container" style="margin-top: 1.5rem; height: 100vh">
         <div class="row">
             <h2
                 class="offset-md-2 offset-lg-3 col-md-8 col-lg-6 text-center white"

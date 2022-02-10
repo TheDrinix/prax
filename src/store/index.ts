@@ -78,9 +78,7 @@ export default createStore({
     },
     actions: {
         async loadSchedule() {
-            const response = await fetch(
-                'https://prax-api.thedrinix.me/schedule'
-            );
+            const response = await fetch('http://localhost:3001/schedule');
             const jsonResponse = await response.json();
             const sorted: Schedule[] = jsonResponse.items.sort(
                 (a: Schedule, b: Schedule) => {
@@ -96,7 +94,7 @@ export default createStore({
             const token = store.state.accessToken.token;
 
             const response = await fetch(
-                'https://prax-api.thedrinix.me/addNewSchedule',
+                'http://localhost:3001/addNewSchedule',
                 {
                     method: 'POST',
                     body,
@@ -120,7 +118,7 @@ export default createStore({
             const token = store.state.accessToken.token;
 
             const response = await fetch(
-                'https://prax-api.thedrinix.me/removeSchedule',
+                'http://localhost:3001/removeSchedule',
                 {
                     method: 'DELETE',
                     body,
@@ -139,7 +137,7 @@ export default createStore({
             const token = store.state.accessToken.token;
 
             const response = await fetch(
-                'https://prax-api.thedrinix.me/updateSchedule',
+                'http://localhost:3001/updateSchedule',
                 {
                     method: 'PUT',
                     body,
