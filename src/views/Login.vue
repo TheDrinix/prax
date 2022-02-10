@@ -14,7 +14,7 @@ const login = async () => {
         password: password.value,
     });
 
-    const response = await fetch('http://localhost:3001/auth', {
+    const response = await fetch('https://prax-api.thedrinix.me/auth', {
         method: 'POST',
         body: bodyContent,
         headers: {
